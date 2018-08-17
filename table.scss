@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+$tableBorder: 1px #333 solid;
+$connor: 3px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font: normal 16px "Microsoft YaHei";
+}
+.fl{
+  display: inline-block;
+  float: left;
+}
+.fr{
+  display: inline-block;
+  float: right;
+}
+.hidden{
+  display: none;
+}
+.table-content {
+  width: 1000px;
+  margin: 50px auto;
+  table.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: $tableBorder;
+    .table-header {
+      background-color: #0099CC;
+      color: #FFF;
+      text-align: center;
+    }
+    tr {
+      td, th {
+        border: $tableBorder;
+        padding: 5px;
+        &.search-td {
+          background-color: #eee;
+          text-align: right;
+          input {
+            height: 24px;
+            line-height: 24px;
+            border: 1px #0099CC solid;
+            border-radius: $connor;
+            vertical-align: middle;
+          }
+          button {
+            padding: 5px 25px 6px;
+            border: none;
+            color: #FFF;
+            background-color: #0099CC;
+            border-radius: $connor;
+            cursor: pointer;
+            vertical-align: middle;
+            &:hover {
+              background-color: #0099FF;
+            }
+            &:focus {
+              outline: none;
+            }
+            &.add-row,&.del-row,&.edit-row {
+              float: left;
+            }
+            &.del-row, &.edit-row {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .table-pagination {
+    text-align: right;
+    line-height: 26px;
+    height: 26px;
+    span {
+      margin: 0 3px;
+    }
+    button {
+      padding: 5px 10px;
+      border: none;
+      color: #FFF;
+      background-color: #0099CC;
+      border-radius: $connor;
+      cursor: pointer;
+      &:hover {
+        background-color: #0099FF;
+      }
+      &:focus {
+        outline: none;
+      }
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    select, option, input {
+      width: 50px;
+      height: 22px;
+      line-height: 22px;
+      margin: 0 3px;
+      text-align: center;
+      border: 1px #ccc solid;
+      border-radius: $connor;
+      vertical-align: middle;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.modal{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  .message-box{
+    width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: $connor;
+    box-shadow: 0 0 10px #000;
+    .message-box-header{
+      border-bottom: 1px #ddd solid;
+      padding: 20px;
+      box-sizing: border-box;
+      .close-btn{
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        color: #999;
+        display: inline-block;
+        font-size: 24px;
+        cursor: pointer;
+        float: right;
+        &:hover{
+          color: #000;
+        }
+      }
+
+    }
+    .message-box-content{
+      padding: 20px;
+      box-sizing: border-box;
+      table.row-table{
+        margin: 0 auto;
+        tr{
+          th,td{
+            padding: 5px 3px;
+            height: 26px;
+            line-height: 26px;
+            input{
+              width: 300px;
+              height: 26px;
+              line-height: 26px;
+              border-radius: $connor;
+              border: 1px #ccc solid;
+            }
+          }
+          th{
+            text-align: right;
+          }
+          td{
+            text-align: left;
+          }
+        }
+      }
+    }
+    .message-box-footer{
+      padding: 20px;
+      text-align: center;
+      button{
+        padding: 6px 25px;
+        border: none;
+        color: #FFF;
+        background-color: #0099CC;
+        border-radius: $connor;
+        cursor: pointer;
+        &:hover {
+          background-color: #0099FF;
+        }
+        &:focus {
+          outline: none;
+        }
+        &.disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+

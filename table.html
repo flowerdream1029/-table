@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- Author:lizm-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="description" content="电子税务局,网上办税服务厅">
+    <meta name="keywords" content="电子税务局,网上办税服务厅">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="table.css">
+
+    <title>表格增删改查</title>
+</head>
+<body>
+
+<div class="table-content">
+    <table class="main-table" id="main-table">
+        <thead id="thead" class="table-header">
+        <tr>
+            <td colspan="11" class="search-td">
+                <button id="add-row-btn" class="add-row">添加</button>
+                <button id="edit-row-btn" class="edit-row">编辑</button>
+                <button id="del-row-btn" class="del-row">删除</button>
+                <input type="text" class="search-input" id="search-input" placeholder="输入中文关键字查询"/>
+                <button class="search-btn" id="search-btn">查询</button>
+            </td>
+        </tr>
+        <tr>
+            <th ><input type="checkbox" id="pick-all" name="checked"></th>
+            <th width="70" align="center">序号</th>
+            <th width="100">姓名</th>
+            <th width="70" align="center">年龄</th>
+            <th width="70" align="center">性别</th>
+            <th width="120" align="center">生日</th>
+            <th width="140">学校</th>
+            <th width="80">学历</th>
+            <th width="120">部门</th>
+            <th width="120">职位</th>
+            <th width="120">是否选中</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        <tfoot id="tfoot">
+        <tr>
+            <td colspan="11">
+                <div class="table-pagination">
+                    <div class="fl">
+                        共<span id="total"></span>条
+                        每页<select id="page-size">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>条
+                        <button id="prev">上一页</button>
+                        <span id="current-page"></span> / <span id="total-page"></span>
+                        <button id="next">下一页</button>
+                    </div>
+
+                    <div class="fr">
+                        第<input type="text" id="target-page"/>页
+                        <button id="jump-to">跳转</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="modal" id="modal-add">
+    <div class="message-box">
+        <div class="message-box-header">
+            详情
+            <span class="close-btn" id="modal-close">×</span>
+        </div>
+        <div class="message-box-content">
+            <form id="row-form">
+                <table class="row-table">
+                    <tr>
+                        <td>姓名</td>
+                        <td><input type="text" name="name" required></td>
+                        <td>年龄</td>
+                        <td><input type="text" name="age" required></td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <input style="display: inline-block;width: 50px" type="radio" name="gender" value="0" class="input-gender" required>女
+                            <input style="display: inline-block;width: 50px" type="radio" name="gender" value="1" class="input-gender" required>男
+                        </td>
+                        <td>生日</td>
+                        <td><input type="date" name="birthday" required></td>
+                    </tr>
+                    <tr>
+                        <td>学校</td>
+                        <td><input type="text" name="school" required></td>
+                        <td>学历</td>
+                        <td><input type="text" name="educational_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>部门</td>
+                        <td><input type="text" name="dept_name" required></td>
+                        <td>职位</td>
+                        <td><input type="text" name="position_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>城市</td>
+                        <td><input type="text" name="city" required></td>
+                        <td>薪资</td>
+                        <td><input type="number" name="salary" required></td>
+                    </tr>
+                    <tr>
+                        <td>邮箱</td>
+                        <td><input type="email" name="email" required></td>
+                        <td>婚否</td>
+                        <td>
+                            <input style="display: inline-block;width: 50px" type="radio" name="married" required>未婚
+                            <input style="display: inline-block;width: 50px" type="radio" name="married" required>已婚
+                        </td>
+                    </tr>
+                    <tr class="hidden">
+                        <td><input type="text" name="id"></td>
+                    </tr>
+                </table>
+                <div class="message-box-footer">
+                    <button id="form-submit" type="submit">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="mock.js"></script>
+<script src="table.js"></script>
+</body>
+</html>

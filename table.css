@@ -1,0 +1,154 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font: normal 16px "Microsoft YaHei"; }
+
+.fl {
+  display: inline-block;
+  float: left; }
+
+.fr {
+  display: inline-block;
+  float: right; }
+
+.hidden {
+  display: none; }
+
+.table-content {
+  width: 1000px;
+  margin: 50px auto; }
+  .table-content table.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px #333 solid; }
+    .table-content table.main-table .table-header {
+      background-color: #0099CC;
+      color: #FFF;
+      text-align: center; }
+    .table-content table.main-table tr td, .table-content table.main-table tr th {
+      border: 1px #333 solid;
+      padding: 5px; }
+      .table-content table.main-table tr td.search-td, .table-content table.main-table tr th.search-td {
+        background-color: #eee;
+        text-align: right; }
+        .table-content table.main-table tr td.search-td input, .table-content table.main-table tr th.search-td input {
+          height: 24px;
+          line-height: 24px;
+          border: 1px #0099CC solid;
+          border-radius: 3px;
+          vertical-align: middle; }
+        .table-content table.main-table tr td.search-td button, .table-content table.main-table tr th.search-td button {
+          padding: 5px 25px 6px;
+          border: none;
+          color: #FFF;
+          background-color: #0099CC;
+          border-radius: 3px;
+          cursor: pointer;
+          vertical-align: middle; }
+          .table-content table.main-table tr td.search-td button:hover, .table-content table.main-table tr th.search-td button:hover {
+            background-color: #0099FF; }
+          .table-content table.main-table tr td.search-td button:focus, .table-content table.main-table tr th.search-td button:focus {
+            outline: none; }
+          .table-content table.main-table tr td.search-td button.add-row, .table-content table.main-table tr td.search-td button.del-row, .table-content table.main-table tr td.search-td button.edit-row, .table-content table.main-table tr th.search-td button.add-row, .table-content table.main-table tr th.search-td button.del-row, .table-content table.main-table tr th.search-td button.edit-row {
+            float: left; }
+          .table-content table.main-table tr td.search-td button.del-row, .table-content table.main-table tr td.search-td button.edit-row, .table-content table.main-table tr th.search-td button.del-row, .table-content table.main-table tr th.search-td button.edit-row {
+            margin-left: 20px; }
+  .table-content .table-pagination {
+    text-align: right;
+    line-height: 26px;
+    height: 26px; }
+    .table-content .table-pagination span {
+      margin: 0 3px; }
+    .table-content .table-pagination button {
+      padding: 5px 10px;
+      border: none;
+      color: #FFF;
+      background-color: #0099CC;
+      border-radius: 3px;
+      cursor: pointer; }
+      .table-content .table-pagination button:hover {
+        background-color: #0099FF; }
+      .table-content .table-pagination button:focus {
+        outline: none; }
+      .table-content .table-pagination button.disabled {
+        cursor: not-allowed; }
+    .table-content .table-pagination select, .table-content .table-pagination option, .table-content .table-pagination input {
+      width: 50px;
+      height: 22px;
+      line-height: 22px;
+      margin: 0 3px;
+      text-align: center;
+      border: 1px #ccc solid;
+      border-radius: 3px;
+      vertical-align: middle; }
+      .table-content .table-pagination select:focus, .table-content .table-pagination option:focus, .table-content .table-pagination input:focus {
+        outline: none; }
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; }
+  .modal .message-box {
+    width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #000; }
+    .modal .message-box .message-box-header {
+      border-bottom: 1px #ddd solid;
+      padding: 20px;
+      box-sizing: border-box; }
+      .modal .message-box .message-box-header .close-btn {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        color: #999;
+        display: inline-block;
+        font-size: 24px;
+        cursor: pointer;
+        float: right; }
+        .modal .message-box .message-box-header .close-btn:hover {
+          color: #000; }
+    .modal .message-box .message-box-content {
+      padding: 20px;
+      box-sizing: border-box; }
+      .modal .message-box .message-box-content table.row-table {
+        margin: 0 auto; }
+        .modal .message-box .message-box-content table.row-table tr th, .modal .message-box .message-box-content table.row-table tr td {
+          padding: 5px 3px;
+          height: 26px;
+          line-height: 26px; }
+          .modal .message-box .message-box-content table.row-table tr th input, .modal .message-box .message-box-content table.row-table tr td input {
+            width: 300px;
+            height: 26px;
+            line-height: 26px;
+            border-radius: 3px;
+            border: 1px #ccc solid; }
+        .modal .message-box .message-box-content table.row-table tr th {
+          text-align: right; }
+        .modal .message-box .message-box-content table.row-table tr td {
+          text-align: left; }
+    .modal .message-box .message-box-footer {
+      padding: 20px;
+      text-align: center; }
+      .modal .message-box .message-box-footer button {
+        padding: 6px 25px;
+        border: none;
+        color: #FFF;
+        background-color: #0099CC;
+        border-radius: 3px;
+        cursor: pointer; }
+        .modal .message-box .message-box-footer button:hover {
+          background-color: #0099FF; }
+        .modal .message-box .message-box-footer button:focus {
+          outline: none; }
+        .modal .message-box .message-box-footer button.disabled {
+          cursor: not-allowed; }
+
+/*# sourceMappingURL=table.css.map */
